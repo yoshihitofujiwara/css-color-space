@@ -1,0 +1,422 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* common
+------------------------------------------------------------*/
+
+#app{
+  text-align: center;
+  text-align: left;
+  width: 60vw;
+  margin: 0 auto;
+  padding-bottom: 70px;
+}
+
+#nav{
+  padding: 70px 0;
+}
+#nav li{
+  padding: 5px 0;
+}
+#nav li a:hover{
+  text-decoration: none;
+}
+
+
+section{
+  padding-top: 70px;
+}
+
+section h1{
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.color_box{
+  margin: 30px 0;
+}
+.color_box h2{
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.gradation{
+  margin: 5px auto;
+  height: 75px;
+}
+
+
+body{
+  --start-hex: #0000ff;
+  --end-hex: #ffff00;
+
+  --start-rgb: rgb(0, 0, 255);
+  --end-rgb: rgb(255, 255, 0);
+  
+  --start-hsl: hsl(240, 100%, 50%);
+  --end-hsl: hsl(60, 100%, 50%);
+  
+  --start-hwb: hwb(240 0% 0%);
+  --end-hwb: hwb(60 0% 0%);
+
+  --start-lch: lch(29.568% 87.467% 301.364);
+  --end-lch: lch(97.607% 63.141% 99.572);
+  
+  --start-oklch: oklch(45.2% 0.39125 264.052);
+  --end-oklch: oklch(96.9% 0.25625 109.687);
+
+  --start-lab: lab(30 68 -112);
+  --end-lab: lab(98 -16 93);
+
+  --start-oklab: oklab(45.2% -0.04 -0.39);
+  --end-oklab: oklab(96.8% -0.08875 0.24875);
+}
+
+/*============================================================
+  LinearGradient
+============================================================*/
+/* hex */
+#LinearGradient .gradation.hex{
+  background: linear-gradient(90deg, 
+    var(--start-hex), 
+    var(--end-hex)
+  );
+}
+/* rgb */
+#LinearGradient .gradation.rgb{
+  background: linear-gradient(90deg, 
+    var(--start-rgb), 
+    var(--end-rgb)
+  );
+}
+/* hsl */
+#LinearGradient .gradation.hsl{
+  background: linear-gradient(90deg, 
+    var(--start-hsl),  
+    var(--end-hsl)
+  );
+}
+/* hwb */
+#LinearGradient .gradation.hwb{
+  background: linear-gradient(90deg, 
+    var(--start-hwb),  
+    var(--end-hwb)
+  );
+}
+/* lch */
+#LinearGradient .gradation.lch{
+  background: linear-gradient(90deg, 
+    var(--start-lch),  
+    var(--end-lch)
+  );
+}
+/* oklch */
+#LinearGradient .gradation.oklch{
+  background: linear-gradient(90deg, 
+    var(--start-oklch),  
+    var(--end-oklch)
+  );
+}
+/* lab */
+#LinearGradient .gradation.lab{
+  background: linear-gradient(90deg, 
+    var(--start-lab),  
+    var(--end-lab)
+  );
+}
+/* oklab */
+#LinearGradient .gradation.oklab{
+  background: linear-gradient(90deg, 
+    var(--start-oklab),  
+    var(--end-oklab)
+  );
+}
+
+
+/*============================================================
+  LinearGradient ColorSpace
+============================================================*/
+/* srgb, srgb-linear, hsl, hwb, lch, lab, oklch, hsl, oklab  */
+/* hsl, hwb, lch, or oklch. */
+/* xyz, xyz-d50, xyz-d65 */
+
+/* srgb */
+#LinearGradientColorSpace .gradation.srgb{
+  background: linear-gradient(in srgb 90deg, 
+    var(--start-rgb), 
+    var(--end-rgb)
+  );
+}
+/* srgb-linear */
+#LinearGradientColorSpace .gradation.srgb-linear{
+  background: linear-gradient(in srgb-linear 90deg, 
+    var(--start-rgb), 
+    var(--end-rgb)
+  );
+}
+/* hsl */
+#LinearGradientColorSpace .gradation.hsl{
+  background: linear-gradient(in hsl 90deg, 
+    var(--start-hsl),  
+    var(--end-hsl)
+  );
+}
+/* hwb */
+#LinearGradientColorSpace .gradation.hwb{
+  background: linear-gradient(in hwb 90deg, 
+    var(--start-hwb),  
+    var(--end-hwb)
+  );
+}
+/* lch */
+#LinearGradientColorSpace .gradation.lch{
+  background: linear-gradient(in lch 90deg, 
+    var(--start-lch),  
+    var(--end-lch)
+  );
+}
+/* oklch */
+#LinearGradientColorSpace .gradation.oklch{
+  background: linear-gradient(in oklch 90deg, 
+    var(--start-oklch),  
+    var(--end-oklch)
+  );
+}
+/* lab */
+#LinearGradientColorSpace .gradation.lab{
+  background: linear-gradient(in lab 90deg, 
+    var(--start-lab),  
+    var(--end-lab)
+  );
+}
+/* oklab */
+#LinearGradientColorSpace .gradation.oklab{
+  background: linear-gradient(in oklab 90deg, 
+    var(--start-oklab),  
+    var(--end-oklab)
+  );
+}
+
+/* xyz */
+#LinearGradientColorSpace .gradation.xyz{
+  background: linear-gradient(in xyz 90deg, 
+    var(--start-rgb),  
+    var(--end-rgb)
+  );
+}
+/* xyz-d50 */
+#LinearGradientColorSpace .gradation.xyz-d50{
+  background: linear-gradient(in xyz-d50 90deg, 
+    var(--start-rgb),  
+    var(--end-rgb)
+  );
+}
+/* xyz-d65 */
+#LinearGradientColorSpace .gradation.xyz-d65{
+  background: linear-gradient(in xyz-d65 90deg, 
+    var(--start-rgb),  
+    var(--end-rgb)
+  );
+}
+
+
+/*============================================================
+  LinearGradientMix
+============================================================*/
+/* srgb */
+#LinearGradientMix .gradation.srgb{
+  background: linear-gradient(90deg, 
+    var(--start-rgb), 
+    color-mix(in srgb, var(--start-rgb), var(--end-rgb) 50%), 
+    var(--end-rgb)
+  );
+}
+/* srgb-linear */
+#LinearGradientMix .gradation.srgb-linear{
+  background: linear-gradient(90deg, 
+    var(--start-rgb), 
+    color-mix(in srgb-linear, var(--start-rgb), var(--end-rgb) 50%), 
+    var(--end-rgb)
+  );
+}
+/* hsl */
+#LinearGradientMix .gradation.hsl{
+  background: linear-gradient(90deg, 
+    var(--start-hsl), 
+    color-mix(in hsl, var(--start-hsl), var(--end-hsl) 50%), 
+    var(--end-hsl)
+  );
+}
+
+/* hwb */
+#LinearGradientMix .gradation.hwb{
+  background: linear-gradient(90deg, 
+    var(--start-hwb), 
+    color-mix(in hwb, var(--start-hwb), var(--end-hwb) 50%), 
+    var(--end-hwb)
+  );
+}
+/* lch */
+#LinearGradientMix .gradation.lch{
+  background: linear-gradient(90deg, 
+    var(--start-lch), 
+    color-mix(in lch, var(--start-lch), var(--end-lch) 50%), 
+    var(--end-lch)
+  );
+}
+/* oklch */
+#LinearGradientMix .gradation.oklch{
+  background: linear-gradient(90deg, 
+    var(--start-oklch), 
+    color-mix(in oklch, var(--start-oklch), var(--end-oklch) 50%), 
+    var(--end-oklch)
+  );
+}
+/* lab */
+#LinearGradientMix .gradation.lab{
+  background: linear-gradient(90deg, 
+    var(--start-lab), 
+    color-mix(in lab, var(--start-lab), var(--end-lab) 50%), 
+    var(--end-lab)
+  );
+}
+/* oklab */
+#LinearGradientMix .gradation.oklab{
+  background: linear-gradient(90deg, 
+    var(--start-oklab), 
+    color-mix(in oklab, var(--start-oklab), var(--end-oklab) 50%), 
+    var(--end-oklab)
+  );
+}
+/* oklab */
+#LinearGradientMix .gradation.oklab{
+  background: linear-gradient(90deg, 
+    var(--start-oklab), 
+    color-mix(in oklab, var(--start-oklab), var(--end-oklab) 50%), 
+    var(--end-oklab)
+  );
+}
+
+/* xyz */
+#LinearGradientMix .gradation.xyz{
+  background: linear-gradient(90deg, 
+    var(--start-rgb), 
+    color-mix(in xyz, var(--start-rgb), var(--end-rgb) 50%), 
+    var(--end-rgb)
+  );
+}
+/* xyz-d50 */
+#LinearGradientMix .gradation.xyz-d50{
+  background: linear-gradient(90deg, 
+  var(--start-rgb), 
+  color-mix(in xyz-d50, var(--start-rgb), var(--end-rgb) 50%), 
+  var(--end-rgb)
+  );
+}
+/* xyz-d65 */
+#LinearGradientMix .gradation.xyz-d65{
+  background: linear-gradient(90deg, 
+    var(--start-rgb), 
+    color-mix(in xyz-d65, var(--start-rgb), var(--end-rgb) 50%), 
+    var(--end-rgb)
+  );
+}
+
+/*============================================================
+  Mix
+============================================================*/
+/* srgb */
+#Mix .gradation.srgb{
+  background: color-mix(in srgb, var(--start-rgb), var(--end-rgb) 50%);
+}
+/* srgb-linear */
+#Mix .gradation.srgb-linear{
+  background: color-mix(in srgb-linear, var(--start-rgb), var(--end-rgb) 50%);
+}
+/* hsl */
+#Mix .gradation.hsl{
+  background: color-mix(in hsl, var(--start-hsl), var(--end-hsl) 50%);
+}
+/* hwb */
+#Mix .gradation.hwb{
+  background: color-mix(in hwb, var(--start-hwb), var(--end-hwb) 50%);
+}
+/* lch */
+#Mix .gradation.lch{
+  background: color-mix(in lch, var(--start-lch), var(--end-lch) 50%);
+}
+/* oklch */
+#Mix .gradation.oklch{
+  background: color-mix(in oklch, var(--start-oklch), var(--end-oklch) 50%);
+}
+/* lab */
+#Mix .gradation.lab{
+  background: color-mix(in lab, var(--start-lab), var(--end-lab) 50%);
+}
+/* oklab */
+#Mix .gradation.oklab{
+  background: color-mix(in oklab, var(--start-oklab), var(--end-oklab) 50%);
+}
+/* oklab */
+#Mix .gradation.oklab{
+  background: color-mix(in oklab, var(--start-oklab), var(--end-oklab) 50%);
+}
+
+/* xyz */
+#Mix .gradation.xyz{
+  background: color-mix(in xyz, var(--start-rgb), var(--end-rgb) 50%);
+}
+/* xyz-d50 */
+#Mix .gradation.xyz-d50{
+  background: color-mix(in xyz-d50, var(--start-rgb), var(--end-rgb) 50%);
+}
+/* xyz-d65 */
+#Mix .gradation.xyz-d65{
+  background: color-mix(in xyz-d65, var(--start-rgb), var(--end-rgb) 50%);
+}
