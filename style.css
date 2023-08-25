@@ -420,3 +420,65 @@ body{
 #Mix .gradation.xyz-d65{
   background: color-mix(in xyz-d65, var(--start-rgb), var(--end-rgb) 50%);
 }
+
+
+/*============================================================
+LinearGradientColorSpaceAnimation
+============================================================*/
+/* srgb */
+#LinearGradientColorSpaceAnimation .gradation.srgb{
+  background: linear-gradient(in srgb 90deg, 
+    var(--start-hsl), 
+    var(--end-hsl)
+  );
+}
+/* srgb-linear */
+#LinearGradientColorSpaceAnimation .gradation.srgb-linear{
+  background: linear-gradient(in srgb-linear 90deg, 
+    var(--start-hsl), 
+    var(--end-hsl)
+  );
+}
+/* hsl */
+#LinearGradientColorSpaceAnimation .gradation.hsl{
+  background: linear-gradient(in hsl decreasing hue 90deg, 
+    var(--start-hsl),  
+    var(--end-hsl)
+  );
+}
+/* hwb */
+#LinearGradientColorSpaceAnimation .gradation.hwb{
+  background: linear-gradient(in hwb decreasing hue 90deg, 
+    var(--start-hsl),  
+    var(--end-hsl)
+  );
+}
+/* lch */
+#LinearGradientColorSpaceAnimation .gradation.lch{
+  background: linear-gradient(in lch decreasing hue 90deg, 
+    var(--start-hsl),  
+    var(--end-hsl)
+  );
+}
+/* oklch */
+#LinearGradientColorSpaceAnimation .gradation.oklch{
+  background: linear-gradient(in oklch decreasing hue 90deg, 
+    var(--start-hsl),  
+    var(--end-hsl)
+  );
+}
+/* lab */
+#LinearGradientColorSpaceAnimation .gradation.lab{
+  background: linear-gradient(in lab 90deg, 
+    var(--start-hsl),  
+    var(--end-hsl)
+  );
+}
+/* oklab */
+#LinearGradientColorSpaceAnimation .gradation.oklab{
+  background: linear-gradient(in oklab 90deg, 
+    var(--start-hsl),  
+    var(--end-hsl)
+  );
+}
+
