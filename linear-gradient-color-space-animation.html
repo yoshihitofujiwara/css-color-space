@@ -62,20 +62,13 @@
 
   <script>
     const body = document.querySelector('body');
-    const SelectStyle = getComputedStyle(body);
-
-    const StyleValue = String(SelectStyle.getPropertyValue('--start-hsl')).trim();
-    // console.log(StyleValue);
-    body.style.setProperty('--start-hsl', `hsl(60, 100%, 50%)`);
-
+    const ADD_VAL = 0.5;
     let startHsl = 240;
     let endHsl = 60;
-    const addValue = 1;
 
     function update() {
-      startHsl = startHsl + addValue > 360 ? 0 : startHsl + addValue;
-      endHsl = endHsl + addValue > 360 ? 0 : endHsl + addValue;
-      // endHsl += addValue;
+      startHsl = (startHsl + ADD_VAL) % 360 == 0 ? 0 : startHsl + ADD_VAL;
+      endHsl = (endHsl + ADD_VAL) % 360 == 0 ? 0 : endHsl + ADD_VAL;
 
       body.style.setProperty('--start-hsl', `hsl(${startHsl}, 100%, 50%)`);
       body.style.setProperty('--end-hsl', `hsl(${endHsl}, 100%, 50%)`);
